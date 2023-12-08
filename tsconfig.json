@@ -5,6 +5,6 @@
 		"module": "CommonJS", // use ES6 modules
 		"target": "es5" // target ES5 for maximum browser compatibility
 	},
-	"include": ["./client/**/*"],
+	"include": ["node-client/**/*"],
 	"exclude": ["node_modules", "./server/**/*"]
 }
