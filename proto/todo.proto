@@ -4,6 +4,10 @@ package ToDoPackage;
 
 service TodoService {
   rpc PingPong(PingRequest) returns (PongResponse) {}
+  rpc Create(Todo) returns (Todo) {}
+  rpc ReadAll(GetTodo) returns (TodoList) {}
+  rpc Update(Todo) returns (Todo) {}
+  rpc Delete(TodoId) returns (Status) {}
 }
 
 message PingRequest {
@@ -12,4 +16,28 @@ message PingRequest {
 
 message PongResponse {
   string message = 1;
+}
+
+message Status {
+  bool status = 1;
+}
+
+message Empty {}
+
+message Todo {
+  string id = 1;
+  string title = 2;
+  bool completed = 3;
+}
+
+message TodoList {
+  repeated Todo todos = 1;
+}
+
+message TodoId {
+  string id = 1;
+}
+
+message GetTodo {
+  bool completed = 1;
 }

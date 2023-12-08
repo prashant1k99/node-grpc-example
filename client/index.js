@@ -46,4 +46,68 @@ client.waitForReady(deadline, function (err) {
         }
         console.log('RES: ', res);
     });
+    client.ReadAll({}, function (err, res) {
+        if (err != null) {
+            return console.error(err);
+        }
+        console.log('GET TODO: ', res);
+    });
+    client.Create({
+        title: 'New Todo 1',
+        completed: false
+    }, function (err, res) {
+        if (err != null) {
+            return console.error(err);
+        }
+        console.log('Created TODO: ', res);
+    });
+    client.Create({
+        title: 'New Todo 2',
+        completed: false
+    }, function (err, res) {
+        if (err != null) {
+            return console.error(err);
+        }
+        console.log('Created TODO: ', res);
+    });
+    client.Update({
+        id: '0',
+        title: 'Updated Todo',
+        completed: true
+    }, function (err, res) {
+        if (err != null) {
+            return console.error(err);
+        }
+        console.log('Updated TODO: ', res);
+    });
+    client.ReadAll({}, function (err, res) {
+        if (err != null) {
+            return console.error(err);
+        }
+        console.log('GET TODO: ', res);
+    });
+    client.ReadAll({ completed: false }, function (err, res) {
+        if (err != null) {
+            return console.error(err);
+        }
+        console.log('GET TODO [Completed => false]: ', res);
+    });
+    client.ReadAll({ completed: true }, function (err, res) {
+        if (err != null) {
+            return console.error(err);
+        }
+        console.log('GET TODO [Completed => true]: ', res);
+    });
+    client.Delete({ id: '0' }, function (err, res) {
+        if (err != null) {
+            return console.error(err);
+        }
+        console.log('Deleted TODO: ', res);
+    });
+    client.ReadAll({}, function (err, res) {
+        if (err != null) {
+            return console.error(err);
+        }
+        console.log('GET TODO: ', res);
+    });
 });
