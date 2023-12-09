@@ -142,9 +142,9 @@ function deleteTask(id: number) {
             console.log(err);
         } else {
             console.log(response.toObject());
+            fetchTodos(getActiveTab() as 'pending' | 'all' | 'completed')
         }
     })
-    fetchTodos(getActiveTab() as 'pending' | 'all' | 'completed')
 }
 
 function updateStatus(id: number, completed: boolean) {
@@ -157,7 +157,7 @@ function updateStatus(id: number, completed: boolean) {
             console.log(err);
         } else {
             console.log(response.toObject());
+            fetchTodos(getActiveTab() as 'pending' | 'all' | 'completed')
         }
     })
-    fetchTodos(getActiveTab() as 'pending' | 'all' | 'completed')
 }
