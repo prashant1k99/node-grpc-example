@@ -2,9 +2,9 @@
 
 
 export interface GetTodo {
-  'completed'?: (boolean);
+  'completed'?: (number);
 }
 
 export interface GetTodo__Output {
-  'completed': (boolean);
+  'completed': (number);
 }

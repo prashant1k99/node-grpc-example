@@ -2,9 +2,10 @@ import { Todo } from '../../proto/ToDoPackage/Todo'
 
 const data: Todo[] = []
 
-export const getTodos = (completed?: Boolean) => {
-  if (completed != null) {
-    return data.filter((t) => t.completed === completed)
+export const getTodos = (completed?: number) => {
+  console.log('Completed: ', completed)
+  if (completed) {
+    return data.filter((t) => t.completed === (completed === 1 ? false : true))
   }
   return data
 };
@@ -12,7 +13,7 @@ export const getTodos = (completed?: Boolean) => {
 export const createTodo = (todo: Todo) => {
   const newTodo = {
     ...todo,
-    id: data.length.toString(),
+    id: data.length + 1,
     completed: false
   }
   data.push(newTodo)
@@ -34,7 +35,7 @@ export const updateTodo = (todo: Todo) => {
   return todo;
 }
 
-export const deleteTodo = (id: string) => {
+export const deleteTodo = (id: number) => {
   const index = data.findIndex((t) => t.id === id)
   if (index === -1) {
     return false;

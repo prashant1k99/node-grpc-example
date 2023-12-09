@@ -57,8 +57,8 @@ export namespace Status {
 }
 
 export class Todo extends jspb.Message {
-  getId(): string;
-  setId(value: string): Todo;
+  getId(): number;
+  setId(value: number): Todo;
 
   getTitle(): string;
   setTitle(value: string): Todo;
@@ -76,7 +76,7 @@ export class Todo extends jspb.Message {
 
 export namespace Todo {
   export type AsObject = {
-    id: string,
+    id: number,
     title: string,
     completed: boolean,
   }
@@ -103,8 +103,8 @@ export namespace TodoList {
 }
 
 export class TodoId extends jspb.Message {
-  getId(): string;
-  setId(value: string): TodoId;
+  getId(): number;
+  setId(value: number): TodoId;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): TodoId.AsObject;
@@ -116,13 +116,13 @@ export class TodoId extends jspb.Message {
 
 export namespace TodoId {
   export type AsObject = {
-    id: string,
+    id: number,
   }
 }
 
 export class GetTodo extends jspb.Message {
-  getCompleted(): boolean;
-  setCompleted(value: boolean): GetTodo;
+  getCompleted(): number;
+  setCompleted(value: number): GetTodo;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetTodo.AsObject;
@@ -134,7 +134,7 @@ export class GetTodo extends jspb.Message {
 
 export namespace GetTodo {
   export type AsObject = {
-    completed: boolean,
+    completed: number,
   }
 }
 

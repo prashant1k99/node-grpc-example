@@ -17,3 +17,5 @@ chmod +x ./proto/build.sh
 ```
 
 To make requests to a gRPC service from a browser, you'll need to use gRPC-Web, which is a variant of gRPC that's designed to work over HTTP/1.1 and HTTP/2. You'll also need a proxy to translate between gRPC-Web requests and gRPC responses. Envoy is a popular proxy for this purpose.
+
+4. Issues to handle when using grpc, falsy values such as `false`, `0`, etc. are passed as null

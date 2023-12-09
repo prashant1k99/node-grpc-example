@@ -17,9 +17,10 @@ const server = new grpc.Server();
 server.addService(todoPackage.TodoService.service, {
   PingPong: (call, callback) => {
     console.log('REQ: ', call.request);
-    callback(null, { message: call.request.message + ' Pong' });
+    callback(null, { message: 'Pong' });
   },
   ReadAll: (call, callback) => {
+    console.log('REQ: ', call.request)
     const todos = getTodos(call.request.completed);
     callback(null, { todos });
   },

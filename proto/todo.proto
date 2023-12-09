@@ -23,7 +23,7 @@ message Status {
 }
 
 message Todo {
-  string id = 1;
+  int32 id = 1;
   string title = 2;
   bool completed = 3;
 }
@@ -33,9 +33,9 @@ message TodoList {
 }
 
 message TodoId {
-  string id = 1;
+  int32 id = 1;
 }
 
 message GetTodo {
-  bool completed = 1;
+  int32 completed = 1;
 }

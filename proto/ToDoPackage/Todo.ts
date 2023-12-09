@@ -2,13 +2,13 @@
 
 
 export interface Todo {
-  'id'?: (string);
+  'id'?: (number);
   'title'?: (string);
   'completed'?: (boolean);
 }
 
 export interface Todo__Output {
-  'id': (string);
+  'id': (number);
   'title': (string);
   'completed': (boolean);
 }

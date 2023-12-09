@@ -597,7 +597,7 @@ proto.ToDoPackage.Todo.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ToDoPackage.Todo.toObject = function(includeInstance, msg) {
   var f, obj = {
-    id: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    id: jspb.Message.getFieldWithDefault(msg, 1, 0),
     title: jspb.Message.getFieldWithDefault(msg, 2, ""),
     completed: jspb.Message.getBooleanFieldWithDefault(msg, 3, false)
   };
@@ -637,7 +637,7 @@ proto.ToDoPackage.Todo.deserializeBinaryFromReader = function(msg, reader) {
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {number} */ (reader.readInt32());
       msg.setId(value);
       break;
     case 2:
@@ -678,8 +678,8 @@ proto.ToDoPackage.Todo.prototype.serializeBinary = function() {
 proto.ToDoPackage.Todo.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getId();
-  if (f.length > 0) {
-    writer.writeString(
+  if (f !== 0) {
+    writer.writeInt32(
       1,
       f
     );
@@ -702,20 +702,20 @@ proto.ToDoPackage.Todo.serializeBinaryToWriter = function(message, writer) {
 
 
 /**
- * optional string id = 1;
- * @return {string}
+ * optional int32 id = 1;
+ * @return {number}
  */
 proto.ToDoPackage.Todo.prototype.getId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
- * @param {string} value
+ * @param {number} value
  * @return {!proto.ToDoPackage.Todo} returns this
  */
 proto.ToDoPackage.Todo.prototype.setId = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  return jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
@@ -947,7 +947,7 @@ proto.ToDoPackage.TodoId.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ToDoPackage.TodoId.toObject = function(includeInstance, msg) {
   var f, obj = {
-    id: jspb.Message.getFieldWithDefault(msg, 1, "")
+    id: jspb.Message.getFieldWithDefault(msg, 1, 0)
   };
 
   if (includeInstance) {
@@ -985,7 +985,7 @@ proto.ToDoPackage.TodoId.deserializeBinaryFromReader = function(msg, reader) {
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {number} */ (reader.readInt32());
       msg.setId(value);
       break;
     default:
@@ -1018,8 +1018,8 @@ proto.ToDoPackage.TodoId.prototype.serializeBinary = function() {
 proto.ToDoPackage.TodoId.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getId();
-  if (f.length > 0) {
-    writer.writeString(
+  if (f !== 0) {
+    writer.writeInt32(
       1,
       f
     );
@@ -1028,20 +1028,20 @@ proto.ToDoPackage.TodoId.serializeBinaryToWriter = function(message, writer) {
 
 
 /**
- * optional string id = 1;
- * @return {string}
+ * optional int32 id = 1;
+ * @return {number}
  */
 proto.ToDoPackage.TodoId.prototype.getId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
- * @param {string} value
+ * @param {number} value
  * @return {!proto.ToDoPackage.TodoId} returns this
  */
 proto.ToDoPackage.TodoId.prototype.setId = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  return jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
@@ -1077,7 +1077,7 @@ proto.ToDoPackage.GetTodo.prototype.toObject = function(opt_includeInstance) {
  */
 proto.ToDoPackage.GetTodo.toObject = function(includeInstance, msg) {
   var f, obj = {
-    completed: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
+    completed: jspb.Message.getFieldWithDefault(msg, 1, 0)
   };
 
   if (includeInstance) {
@@ -1115,7 +1115,7 @@ proto.ToDoPackage.GetTodo.deserializeBinaryFromReader = function(msg, reader) {
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {boolean} */ (reader.readBool());
+      var value = /** @type {number} */ (reader.readInt32());
       msg.setCompleted(value);
       break;
     default:
@@ -1148,8 +1148,8 @@ proto.ToDoPackage.GetTodo.prototype.serializeBinary = function() {
 proto.ToDoPackage.GetTodo.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getCompleted();
-  if (f) {
-    writer.writeBool(
+  if (f !== 0) {
+    writer.writeInt32(
       1,
       f
     );
@@ -1158,20 +1158,20 @@ proto.ToDoPackage.GetTodo.serializeBinaryToWriter = function(message, writer) {
 
 
 /**
- * optional bool completed = 1;
- * @return {boolean}
+ * optional int32 completed = 1;
+ * @return {number}
  */
 proto.ToDoPackage.GetTodo.prototype.getCompleted = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 1, false));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
- * @param {boolean} value
+ * @param {number} value
  * @return {!proto.ToDoPackage.GetTodo} returns this
  */
 proto.ToDoPackage.GetTodo.prototype.setCompleted = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 1, value);
+  return jspb.Message.setProto3IntField(this, 1, value);
 };
 
 

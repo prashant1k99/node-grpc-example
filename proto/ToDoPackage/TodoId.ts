@@ -2,9 +2,9 @@
 
 
 export interface TodoId {
-  'id'?: (string);
+  'id'?: (number);
 }
 
 export interface TodoId__Output {
-  'id': (string);
+  'id': (number);
 }

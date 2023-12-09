@@ -51,45 +51,23 @@ client.waitForReady(deadline, (err) => {
     }
     console.log('Created TODO: ', res);
   });
-  client.Update({
-    id: '0',
-    title: 'Updated Todo',
+  client.Create({
+    title: 'New Todo 3',
+    completed: false
+  }, (err, res) => {
+    if (err != null) {
+      return console.error(err);
+    }
+    console.log('Created TODO: ', res);
+  });
+  client.Create({
+    title: 'New Todo 4',
     completed: true
   }, (err, res) => {
     if (err != null) {
       return console.error(err);
     }
-    console.log('Updated TODO: ', res);
-  });
-  client.ReadAll({}, (err, res) => {
-    if (err != null) {
-      return console.error(err);
-    }
-    console.log('GET TODO: ', res);
-  });
-  client.ReadAll({ completed: false }, (err, res) => {
-    if (err != null) {
-      return console.error(err);
-    }
-    console.log('GET TODO [Completed => false]: ', res);
-  });
-  client.ReadAll({ completed: true }, (err, res) => {
-    if (err != null) {
-      return console.error(err);
-    }
-    console.log('GET TODO [Completed => true]: ', res);
-  })
-  client.Delete({ id: '0' }, (err, res) => {
-    if (err != null) {
-      return console.error(err);
-    }
-    console.log('Deleted TODO: ', res);
-  });
-  client.ReadAll({}, (err, res) => {
-    if (err != null) {
-      return console.error(err);
-    }
-    console.log('GET TODO: ', res);
+    console.log('Created TODO: ', res);
   });
 })
 
