@@ -9,7 +9,6 @@ type SubtypeConstructor<Constructor extends new (...args: any) => any, Subtype> 
 
 export interface ProtoGrpcType {
   ToDoPackage: {
-    Empty: MessageTypeDefinition
     GetTodo: MessageTypeDefinition
     PingRequest: MessageTypeDefinition
     PongResponse: MessageTypeDefinition

@@ -22,8 +22,6 @@ message Status {
   bool status = 1;
 }
 
-message Empty {}
-
 message Todo {
   string id = 1;
   string title = 2;
