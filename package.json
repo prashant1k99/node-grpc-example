@@ -8,7 +8,7 @@
 		"server:start": "ts-node ./server/index.ts",
 		"server:watch": "nodemon --exec ts-node ./server/index.ts",
 		"node-client:watch": "cd node-client && tsc -w -p ../tsconfig.json",
-		"client:watch": "cd client && npx parcel ./index.html & npx parcel watch ./index.html"
+		"client:watch": "cd client && npx parcel ./index.html --port 8000 && npx parcel watch ./index.html"
 	},
 	"keywords": [],
 	"author": "",

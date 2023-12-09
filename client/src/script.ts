@@ -1,3 +1,4 @@
+
 import { TodoServiceClient } from './proto/TodoServiceClientPb';
 import { Todo, TodoList, GetTodo, PingRequest } from './proto/todo_pb'
 import { SERVER_PORT } from '../../CONSTANTS'
@@ -16,7 +17,7 @@ filters.forEach(filter => {
 
 // Simple PingPong request with a message
 const SERVER_URL = `http://localhost:${SERVER_PORT}`;
-console.log('SERVER_URL: ', SERVER_URL)
+
 const client = new TodoServiceClient(SERVER_URL);
 
 const pingRequest = new PingRequest();
