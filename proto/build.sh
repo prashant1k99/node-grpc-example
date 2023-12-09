@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PROTO_DIR=./proto
-OUTPUT_DIR=./client/proto
+OUTPUT_DIR=./client/src
 
 mkdir -p $OUTPUT_DIR
 

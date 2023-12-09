@@ -2,13 +2,13 @@
 	"name": "grpc-example",
 	"version": "1.0.0",
 	"description": "",
-	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"proto:gen": "./proto/build.sh",
 		"server:start": "ts-node ./server/index.ts",
 		"server:watch": "nodemon --exec ts-node ./server/index.ts",
-		"client:watch": "cd client && tsc -w -p ../tsconfig.json"
+		"node-client:watch": "cd node-client && tsc -w -p ../tsconfig.json",
+		"client:watch": "cd client && npx parcel ./index.html & npx parcel watch ./index.html"
 	},
 	"keywords": [],
 	"author": "",
@@ -19,6 +19,7 @@
 		"google-protobuf": "^3.21.2",
 		"grpc-web": "^1.5.0",
 		"nodemon": "^3.0.2",
+		"parcel": "^2.10.3",
 		"ts-node": "^10.9.2",
 		"typescript": "^5.3.3"
 	}

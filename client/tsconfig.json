@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"esModuleInterop": true,
+		"rootDir": "./",
+		"module": "CommonJS", // use ES6 modules
+		"target": "es2016"
+	},
+	"include": ["src/**/*"],
+	"exclude": ["asset/**/*"]
+}
