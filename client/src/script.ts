@@ -1,7 +1,6 @@
 
 import { TodoServiceClient } from './proto/TodoServiceClientPb';
 import { Todo, TodoList, GetTodo, PingRequest } from './proto/todo_pb'
-import { SERVER_PORT } from '../../CONSTANTS'
 
 // This will handle the tab switching
 const filters = document.querySelectorAll(".filters span")
@@ -16,6 +15,7 @@ filters.forEach(filter => {
 })
 
 // Simple PingPong request with a message
+const SERVER_PORT = 8080;
 const SERVER_URL = `http://localhost:${SERVER_PORT}`;
 
 const client = new TodoServiceClient(SERVER_URL);
