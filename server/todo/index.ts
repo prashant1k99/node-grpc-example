@@ -24,7 +24,6 @@ export const updateTodo = (todo: Todo) => {
   if (index === -1) {
     return null;
   }
-  console.log('Completed: ', todo.completed)
   data[index] = {
     ...data[index],
     title: todo.title || data[index].title,
